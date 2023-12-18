@@ -1,0 +1,94 @@
+.different {
+    margin-bottom: 82px;
+    position: relative;
+}
+.different::after{
+    content: "";
+    background-image: url(./../img/coffee_blast_l.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -120px;
+    right: 0;
+    width: 380px;
+    height: 272px;
+    z-index: 5;
+
+    @include mediaTabletS{
+        top: -95px;
+        width: 240px;
+    }
+    @include mediaMobile{
+        display: none;
+    }
+}
+.diff__title {
+    font-size: 54px;
+    font-weight: 700;
+    text-align: center;
+    color: $coffee;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+.diff__subtitle {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.diff__cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+
+    @include mediaTablet{
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+    }
+    @include mediaMobile{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.diff__card-wrapper{
+    padding: 36px 40px;
+}
+.diff__card {
+    max-width: 280px;
+    background: #FFF9F1;
+    border: 1px solid $sand;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+.diff__card:hover{
+    background-color: #FFEED8;
+}
+.diff__card-img {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 25px;
+}
+.diff__card-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: $coffee;
+    margin-bottom: 8px;
+}
+.diff__card-text {
+    text-align: center;
+    font-size: 16px;
+}
+//under 
+.diff__undex-content {
+    text-align: center;
+}
+.diff__undex-text {
+    margin-bottom: 10px;
+}
+.diff__undex-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: $coffee;
+    margin-bottom: 38px;
+}

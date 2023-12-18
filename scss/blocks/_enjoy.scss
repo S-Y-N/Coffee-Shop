@@ -1,0 +1,102 @@
+.enjoy {
+    margin-bottom: 82px;
+    position: relative;
+}
+.enjoy::after{
+    content: "";
+    background-image: url(./../img/coffee_blast_l.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -235px;
+    left: 0;
+    width: 380px;
+    height: 272px;
+    z-index: 5;
+    transform: scaleX(-1);
+}
+.enjoy__title {
+    font-size: 54px;
+    color: $coffee;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 7px;
+    letter-spacing: 1px;
+
+    @include mediaMobile{
+        font-size: 38px;
+        padding-top: 20px;
+    }
+}
+.enjoy__subtitle {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.enjoy__cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 7;
+    @include mediaTablet{
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px 20px;
+        justify-items: center;
+    }
+    @include mediaMobile{
+        grid-template-columns: repeat(1,1fr);
+        gap: 40px 20px;
+        justify-items: center;
+    }
+}
+.enjoy__card {
+    position: relative;
+
+    max-width: 280px;
+    background: #FFF9F1;
+    border: 1px solid $sand;
+    transform: scale(1);
+    transition: transform 0.2s ease-in;
+}
+.enjoy__card:hover{
+    transform:  scale(1.1);
+}
+.enjoy__card-content{
+    text-align: center;
+}
+.enjoy__card-img {
+    width: 100%;
+    margin-bottom: 14px;
+}
+.enjoy__card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: $coffee;
+    margin-bottom: 10px;
+}
+.enjoy__card_composition {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 10px;
+}
+.enjoy__card-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: $coffee;
+    margin-bottom: 42px;
+}
+.coffee-link--card{
+    padding: 13px 26px;
+    border-radius: 24px;
+    background-color: $sand;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    @include mediaTablet{
+        padding: 5px 15px;
+        border-radius: 0;
+        bottom: -18px;
+        width: 100%;
+    }
+}

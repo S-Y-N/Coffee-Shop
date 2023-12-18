@@ -1,0 +1,43 @@
+@import './fonts';
+
+body{
+    font-family: $font-main;
+    background-color: $bodyWhite;
+    font-size: 20px;
+    color: $grey;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1280px;
+}
+.none{
+    display: none;
+}
+.main{
+    flex-grow: 1;
+}
+.coffee-link{
+    padding: 13px 26px;
+    border-radius: 24px;
+    background-color: $sand;
+    position: relative;
+    z-index: 4;
+}
+.coffee-link:hover{
+    background-color: $sand1;
+}
+.coffee-link--text {
+    font-size: 16px;
+    color: black;
+    font-weight: 700;
+    &--sign{
+        font-size: 20px;
+    }
+}
+.no-scroll {
+    overflow-y: hidden;
+}

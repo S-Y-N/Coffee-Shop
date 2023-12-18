@@ -1,0 +1,43 @@
+.discover {
+    margin-bottom: 90px;
+}
+.discover__block{
+    display: flex;
+    flex-direction: column;
+
+}
+.discover__block .coffee-link{
+    margin-right: auto;
+
+    @include mediaTablet{
+        margin-right: 0;
+        margin-left: auto;
+    }
+    @include mediaMobile{
+        margin-left: unset;
+        text-align: center;
+
+    }
+}
+
+.discover__content {
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+    gap: 90px;
+
+    @include mediaMobile{
+        grid-template-columns: revert;
+    }
+
+}
+.discover__block-title {
+    font-size: 54px;
+    color: $coffee;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.discover__block-text {
+    line-height: 34px;
+    letter-spacing: 1px;
+    margin-bottom: 43px;
+}

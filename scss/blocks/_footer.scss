@@ -1,0 +1,106 @@
+.footer {
+    background-image: url(./../img/fbg.png);
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+.footer::after{
+    content: '';
+    background-image: url(./../img/cupwind.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -220px;
+    left: 0;
+    width: 285px;
+    height: 100%;
+    transform: scaleX(-1);
+
+    @include mediaTablet{
+        top: -316px;
+    }
+}
+.footer::before{
+    content: '';
+    background-image: url(./../img/cupwind.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -220px;
+    right: 0;
+    width: 285px;
+    height: 100%;
+   
+    @include mediaTablet{
+        top: -313px;
+    }
+}
+.footer::after, .footer::before{
+    @include mediaTabletS{
+        display: none;
+    }
+}
+.footer__content {
+    display: grid;
+    grid-template-columns: 4fr 1.5fr 1.5fr 3fr;
+    gap:66px;
+    padding: 160px 0 72px;    
+    color: white;
+
+    @include mediaTablet{
+        padding: 100px 0 40px;
+    }
+    @include mediaTabletS{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    @include mediaMobile{
+        padding: 40px 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        text-align: center;
+    }
+}
+.footer_about{
+    @include mediaTabletS{
+        grid-area: 2 / 1 / 3 / 4;
+    }
+    @include mediaMobile{
+        grid-area: 4 / 1 / 5 / 2;
+    }
+}
+.footer-nav__list-link{
+    font-size: 18px;
+}
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.footer__logo-link--text {
+    font-size: 54px;
+    font-family: $font-cursive;
+}
+.footer__about-text {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+.footer__about-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav__list-item {
+    margin-bottom: 15px;
+}
+.footer-nav__list-title {
+    font-size: 26px;
+    margin-bottom: 56px;
+
+    @include mediaTablet{
+        font-size: 20px;
+        margin-bottom: 46px;
+    }
+}
